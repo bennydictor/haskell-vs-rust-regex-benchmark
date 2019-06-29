@@ -1,0 +1,25 @@
+[package]
+name = "regex-rs"
+version = "0.1.0"
+authors = ["Michael Sorokin <benny@bennydictor.tk>"]
+edition = "2018"
+
+[profile.release]
+lto = true
+
+[lib]
+name = "regex"
+path = "src/lib.rs"
+
+[[bin]]
+name = "regex"
+path = "src/main.rs"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.2"
+
+[[bench]]
+name = "bench"
+harness = false

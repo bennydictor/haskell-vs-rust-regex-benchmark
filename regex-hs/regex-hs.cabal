@@ -1,0 +1,52 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 49f18ae4430c1f47cc9067402551722e5922b96769c61521b485e8b67dad92d7
+
+name:           regex-hs
+version:        0.1.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_regex_hs
+  hs-source-dirs:
+      src
+  ghc-options: -O2 -funbox-strict-fields
+  build-depends:
+      base
+    , semirings
+  default-language: Haskell2010
+
+executable regex
+  main-is: Main.hs
+  other-modules:
+      Paths_regex_hs
+  hs-source-dirs:
+      app
+  ghc-options: -O2 -funbox-strict-fields -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , regex-hs
+    , semirings
+  default-language: Haskell2010
+
+benchmark regex-bench
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_regex_hs
+  hs-source-dirs:
+      benches
+  ghc-options: -O2 -funbox-strict-fields -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , criterion
+    , regex-hs
+    , semirings
+  default-language: Haskell2010

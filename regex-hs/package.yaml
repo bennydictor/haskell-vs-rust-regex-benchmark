@@ -1,0 +1,36 @@
+name:                regex-hs
+version:             "0.1.0"
+
+dependencies:
+- base
+- semirings
+
+ghc-options:
+  - -O2
+  - -funbox-strict-fields
+
+library:
+  source-dirs: src
+
+executables:
+  regex:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - regex-hs
+
+benchmarks:
+  regex-bench:
+    main:                Main.hs
+    source-dirs:         benches
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - regex-hs
+    - criterion
