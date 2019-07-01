@@ -20,7 +20,7 @@ data    Eps     c s = Eps
 newtype Sym     c s = Sym (c -> s)
 data    Alt p q c s = Alt !(Reg c s p) !(Reg c s q)
 data    Seq p q c s = Seq !(Reg c s p) !(Reg c s q)
-data    Rep r   c s = Rep !(Reg c s r)
+newtype Rep r   c s = Rep (Reg c s r)
 
 eps :: Semiring s => Reg c s Eps
 eps = Reg { empty = one, final = zero, re = Eps }
