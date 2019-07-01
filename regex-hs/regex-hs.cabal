@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 49f18ae4430c1f47cc9067402551722e5922b96769c61521b485e8b67dad92d7
+-- hash: f37d8fde2c3c9d74cd8e4f4a86ce7bfbefa2719337d9033f93f1f176b76e612e
 
 name:           regex-hs
 version:        0.1.0
@@ -29,7 +29,7 @@ executable regex
       Paths_regex_hs
   hs-source-dirs:
       app
-  ghc-options: -O2 -funbox-strict-fields -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -O2 -funbox-strict-fields
   build-depends:
       base
     , regex-hs
@@ -43,7 +43,7 @@ benchmark regex-bench
       Paths_regex_hs
   hs-source-dirs:
       benches
-  ghc-options: -O2 -funbox-strict-fields -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -O2 -funbox-strict-fields
   build-depends:
       base
     , criterion
