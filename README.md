@@ -17,25 +17,22 @@ Any optimisation tips would be greatly appreciated.
 ```
 Benchmark regex-bench: RUNNING...
 benchmarking ab/1_000
-time                 166.6 μs   (138.8 μs .. 198.7 μs)
-                     0.903 R²   (0.863 R² .. 1.000 R²)
-mean                 143.6 μs   (139.6 μs .. 153.2 μs)
-std dev              26.50 μs   (11.82 μs .. 47.24 μs)
-variance introduced by outliers: 95% (severely inflated)
+time                 101.6 μs   (101.5 μs .. 101.6 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 101.7 μs   (101.7 μs .. 101.9 μs)
+std dev              374.6 ns   (162.1 ns .. 755.6 ns)
 
 benchmarking ab/10_000
-time                 1.390 ms   (1.385 ms .. 1.395 ms)
+time                 1.032 ms   (1.031 ms .. 1.032 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 1.452 ms   (1.414 ms .. 1.527 ms)
-std dev              263.7 μs   (157.1 μs .. 409.4 μs)
-variance introduced by outliers: 93% (severely inflated)
+mean                 1.033 ms   (1.033 ms .. 1.034 ms)
+std dev              1.982 μs   (1.327 μs .. 3.379 μs)
 
 benchmarking ab/100_000
-time                 13.97 ms   (13.89 ms .. 14.08 ms)
+time                 10.28 ms   (10.27 ms .. 10.29 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 14.26 ms   (14.16 ms .. 14.46 ms)
-std dev              623.7 μs   (413.9 μs .. 1.024 ms)
-variance introduced by outliers: 32% (moderately inflated)
+mean                 10.30 ms   (10.30 ms .. 10.31 ms)
+std dev              29.24 μs   (19.88 μs .. 50.67 μs)
 
 Benchmark regex-bench: FINISH
 ```
